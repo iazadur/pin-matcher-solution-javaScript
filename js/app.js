@@ -34,9 +34,15 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
 let verifyPin = function () {
     const pin = document.getElementById('display-pin').value
     const typedNumbers = document.getElementById('typed-numbers').value
+    const successMsg = document.getElementById('notify-success')
+    const failError = document.getElementById('notify-faild')
+    
+
     if (pin == typedNumbers) {
-        console.log('verify')
+        successMsg.style.display = 'block'
+        failError.style.display = 'none'
     } else {
-        
+        failError.style.display = 'block'
+        successMsg.style.display = 'none'
     }
 }
